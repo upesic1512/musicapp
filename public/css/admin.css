@@ -1,0 +1,122 @@
+/* General Admin Dashboard Styles */
+.spotify-admin-dashboard {
+    width: 85%;
+    margin: 50px auto;
+    background-color: #191414;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Circular', sans-serif;
+}
+
+.bodyh1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #1DB954; /* Spotify green */
+    margin-bottom: 40px;
+}
+
+.admin-section {
+    margin-bottom: 50px;
+}
+
+.admin-section h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.spotify-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.spotify-table th, .spotify-table td {
+    padding: 15px;
+    border-bottom: 1px solid #282828;
+    color: #b3b3b3;
+}
+
+.spotify-table th {
+    background-color: #282828;
+    font-weight: 600;
+    color: #b3b3b3;
+}
+
+.spotify-table tr:nth-child(even) {
+    background-color: #1d1d1d;
+}
+
+.spotify-table tr:hover {
+    background-color: #282828;
+    cursor: pointer;
+}
+
+/* Button Styles */
+.spotify-button {
+    background-color: #1DB954; /* Spotify green */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotify-button:hover {
+    background-color: #18a849;
+}
+
+/* Delete Button Special Styling */
+.delete-button {
+    background-color: #ff4d4d;
+    border-radius: 50px;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Success Alert Styling */
+.alert {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .spotify-admin-dashboard {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .spotify-table th, .spotify-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .admin-section h2 {
+        font-size: 1.6rem;
+    }
+}

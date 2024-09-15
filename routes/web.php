@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthManager;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,12 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');    
 Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+
+
+
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
+    Route::delete('/admin/songs/{id}', [AdminController::class, 'deleteSong'])->name('admin.deleteSong');
+});
