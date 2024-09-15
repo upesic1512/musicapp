@@ -1,0 +1,253 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    padding-top: 100px;
+    display: flex;
+}
+
+
+
+/* Main welcome section */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: url('https://cdn.pixabay.com/photo/2017/05/09/18/28/headphones-2295898_1280.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+}
+
+.welcome-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #1DB954;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #1aa34a;
+}
+
+
+
+/* Song Grid Layout */
+.song-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px; /* You can adjust this value for wider/narrower layouts */
+}
+
+.song-item {
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.song-item:hover {
+    transform: scale(1.05);
+}
+
+.song-item img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.song-item strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.song-item small {
+    color: #b3b3b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .song-item {
+        padding: 10px;
+    }
+
+    .song-item img {
+        height: 150px;
+    }
+}
+.play-button {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: #1DB954; /* Spotify green */
+    color: #fff;
+    width: auto; /* Set width */  
+    height: auto;
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+.play-button-img {  
+    width: 50%; /* Adjust size of the image */  
+    height: auto; /* Maintain aspect ratio */  
+} 
+
+.play-button:hover {  
+    transform: scale(1.05); /* Slightly enlarge */  
+}  
+
+
+.song-item:hover .play-button {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.song-item {
+    position: relative;
+    background-color: #181818;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.song-item img {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.song-item:hover img {
+    transform: scale(1.1);
+}
+
+.audio-player {
+    padding-top: 10%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181818;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+.audio-player.show {
+    transform: translateY(0);
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.audio-player audio {
+    width: 100%;
+    max-width: 500px;
+}
+    
+
+/* Search Form */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative; /* Needed to position the icon inside */
+}
+
+form input[type="text"] {
+    width: 300px; /* Fixed width */
+    height: 60px;
+    padding: 10px 20px 10px 50px; /* Add left padding to create space for the icon */
+    border: none;
+    border-radius: 50px;
+    background-color: #282828;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form input[type="text"]::placeholder {
+    color: #b3b3b3;
+}
+
+form input[type="text"]:focus {
+    background-color: #3e3e3e; /* Only change background color, no width change */
+}
+
+form button {
+    background-color: #1DB954; /* Spotify green */
+    border: none;
+    cursor: pointer;
+    width: 40px;  /* Width of the round button */
+    height: 40px; /* Height of the round button */
+    border-radius: 50%; /* Fully round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form img.search-icon {
+    position: absolute;
+    left: 20px; /* Adjust the distance from the left */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px; /* Adjust size of the icon */
+    pointer-events: none; /* Prevent icon from blocking text input */
+}
