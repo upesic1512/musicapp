@@ -45,8 +45,6 @@ Route::get('/contact', function () {
 Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 
-
-
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');

@@ -15,7 +15,7 @@ body {
     padding-top: 100px;
 }
 
-/* Register Form Container */
+
 .register-container {
     display: flex;
     flex-direction: column;
@@ -26,11 +26,11 @@ body {
     padding: 1rem;
 }
 
-/* Alert Styles */
+
 .alert-container {
     width: 100%;
-    max-width: 450px; /* Ensure it matches the form's max-width */
-    margin-bottom: 1rem; /* Add margin for spacing above the form */
+    max-width: 450px; 
+    margin-bottom: 1rem; 
 }
 
 .alert {
@@ -40,7 +40,7 @@ body {
     font-size: 14px;
     text-align: center;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box; 
 }
 
 .alert-danger {
@@ -55,7 +55,7 @@ body {
     border: 1px solid #c3e6cb;
 }
 
-/* Register Form Styles */
+
 .register-form {
     background-color: #181818;
     padding: 2.5rem;
@@ -68,7 +68,7 @@ body {
 .register-form h1 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #1DB954; /* Spotify-like green */
+    color: #1DB954;
 }
 
 .input-group {

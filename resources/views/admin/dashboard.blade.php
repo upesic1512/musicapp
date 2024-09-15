@@ -13,7 +13,6 @@
 
 <body>
     
-    
     <div class="spotify-admin-dashboard">
         <h1 class="bodyh1">Admin Dashboard</h1>
     
@@ -23,7 +22,7 @@
             </div>
         @endif
     
-        <!-- Users Section -->
+        
         <section class="admin-section">
             <h2>Manage Users</h2>
             <table class="spotify-table">
@@ -52,7 +51,7 @@
             </table>
         </section>
     
-        <!-- Songs Section -->
+        
         <section class="admin-section">
             <h2>Manage Songs</h2>
             <table class="spotify-table">

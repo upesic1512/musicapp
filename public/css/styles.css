@@ -1,4 +1,4 @@
-/* Reset some basic styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ body {
 
 
 
-/* Main welcome section */
+
 .welcome-section {
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@ body {
 
 
 
-/* Song Grid Layout */
+
 .song-list {
     list-style-type: none;
     padding: 0;
@@ -64,7 +64,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    max-width: 1200px; /* You can adjust this value for wider/narrower layouts */
+    max-width: 1200px;
 }
 
 .song-item {
@@ -81,7 +81,7 @@ body {
 
 .song-item img {
     width: 100%;
-    height: 200px; /* Fixed height */
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -97,7 +97,7 @@ body {
     color: #b3b3b3;
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
     .song-item {
         padding: 10px;
@@ -112,9 +112,9 @@ body {
     top: 70%;
     left: 70%;
     transform: translate(-50%, -50%);
-    background-color: #1DB954; /* Spotify green */
+    background-color: #1DB954;
     color: #fff;
-    width: auto; /* Set width */  
+    width: auto;
     height: auto;
     padding: 15px;
     border-radius: 50%;
@@ -124,12 +124,12 @@ body {
     z-index: 2;
 }
 .play-button-img {  
-    width: 50%; /* Adjust size of the image */  
-    height: auto; /* Maintain aspect ratio */  
+    width: 50%;
+    height: auto;
 } 
 
 .play-button:hover {  
-    transform: scale(1.05); /* Slightly enlarge */  
+    transform: scale(1.05);
 }  
 
 
@@ -150,7 +150,7 @@ body {
 
 .song-item img {
     width: 100%;
-    height: 200px; /* Fixed height */
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -199,19 +199,19 @@ body {
 }
     
 
-/* Search Form */
+
 form {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    position: relative; /* Needed to position the icon inside */
+    position: relative;
 }
 
 form input[type="text"] {
-    width: 300px; /* Fixed width */
+    width: 300px; 
     height: 60px;
-    padding: 10px 20px 10px 50px; /* Add left padding to create space for the icon */
+    padding: 10px 20px 10px 50px; 
     border: none;
     border-radius: 50px;
     background-color: #282828;
@@ -226,16 +226,16 @@ form input[type="text"]::placeholder {
 }
 
 form input[type="text"]:focus {
-    background-color: #3e3e3e; /* Only change background color, no width change */
+    background-color: #3e3e3e;
 }
 
 form button {
-    background-color: #1DB954; /* Spotify green */
+    background-color: #1DB954;
     border: none;
     cursor: pointer;
-    width: 40px;  /* Width of the round button */
-    height: 40px; /* Height of the round button */
-    border-radius: 50%; /* Fully round */
+    width: 40px;  
+    height: 40px; 
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,9 +245,9 @@ form button {
 
 form img.search-icon {
     position: absolute;
-    left: 20px; /* Adjust the distance from the left */
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    height: 20px; /* Adjust size of the icon */
-    pointer-events: none; /* Prevent icon from blocking text input */
+    height: 20px; 
+    pointer-events: none; 
 }

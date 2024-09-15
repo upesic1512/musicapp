@@ -15,7 +15,7 @@
             <input type="text" name="query" placeholder="Search for songs" required>
             
             <button type="submit">
-                <img src="{{asset('storage/icons/search.svg')}}" alt="Search"> <!-- Optional button with icon -->
+                <img src="{{asset('storage/icons/search.svg')}}" alt="Search">
             </button>
         </form>
         
@@ -62,7 +62,7 @@
     const playerTitle = document.getElementById('player-title');
     const playerArtist = document.getElementById('player-artist');
     const playerImg = document.getElementById('player-img');
-    const footer = document.getElementById('footer'); // Get the footer element
+    const footer = document.getElementById('footer');
 
     playButtons.forEach(button => {
         button.addEventListener('click', function(e) {
@@ -73,29 +73,28 @@
             const audioSrc = this.getAttribute('data-audio');
             const imageSrc = this.getAttribute('data-image');
 
-            // Update player info
+     
             playerTitle.textContent = title;
             playerArtist.textContent = artist;
             playerImg.src = imageSrc;
             audioElement.src = audioSrc;
 
-            // Show the player and play the song
+           
             audioPlayer.classList.add('show');
             audioPlayer.classList.remove('hidden');
             audioElement.play();
 
-            // Hide the footer when the player shows up
+          
             footer.style.display = 'none';
         });
     });
 
-    // When the audio is paused or ends, show the footer again
     audioElement.addEventListener('pause', function() {
-        footer.style.display = 'block'; // Show footer again when audio is paused
+        footer.style.display = 'block'; 
     });
 
     audioElement.addEventListener('ended', function() {
-        footer.style.display = 'block'; // Show footer when audio ends
+        footer.style.display = 'block'; 
     });
 });
 

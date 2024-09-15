@@ -19,15 +19,13 @@
                     {{ session('error') }}
                 </div>
             @endif
-
-            <!-- Flash Success Message for Registration -->
             @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
                 </div>
             @endif
 
-            <!-- Validation Error Alert -->
+           
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>

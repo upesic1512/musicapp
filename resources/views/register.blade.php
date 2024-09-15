@@ -13,14 +13,13 @@
 
     <div class="register-container">
         <div class="alert-container">
-            <!-- Flash Error Message for Registration -->
+            
             @if (session('error'))
                 <div class="alert alert-danger">
                     {{ session('error') }}
                 </div>
             @endif
 
-            <!-- Validation Error Alert -->
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -31,7 +30,6 @@
                 </div>
             @endif
 
-            <!-- Flash Success Message for Registration -->
             @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
