@@ -45,8 +45,10 @@ Route::get('/contact', function () {
 Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
-    Route::delete('/admin/songs/{id}', [AdminController::class, 'deleteSong'])->name('admin.deleteSong');
-});
+Route::get('/admin/users', [AdminController::class, 'manageUsers'])->name('admin.manageUsers');
+Route::get('/admin/songs', [AdminController::class, 'manageSongs'])->name('admin.manageSongs');
+Route::get('/admin/messages', [AdminController::class, 'manageMessage'])->name('admin.manageMessages');
+
+Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser'])->name('admin.deleteUser');
+Route::delete('/admin/songs/{id}', [AdminController::class, 'deleteSong'])->name('admin.deleteSong');
+Route::delete('/admin/messages/{id}', [AdminController::class, 'deleteMessage'])->name('admin.deleteMessage');

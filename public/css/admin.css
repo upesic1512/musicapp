@@ -1,121 +1,174 @@
+body{
+    padding-top: 100px;
+    margin-top: 80px;
+}
+
 
 .spotify-admin-dashboard {
-    width: 85%;
-    margin: 50px auto;
-    background-color: #191414;
-    padding: 40px;
+    background-color: #282828;
+    color: white;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-family: 'Circular', sans-serif;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-.bodyh1 {
-    text-align: center;
-    font-size: 2.8rem;
-    color: #1DB954; 
-    margin-bottom: 40px;
-}
-
-.admin-section {
-    margin-bottom: 50px;
-}
-
-.admin-section h2 {
-    font-size: 2rem;
-    color: #fff;
+.spotify-admin-dashboard h1, 
+.spotify-admin-dashboard h2 {
+    color:  #1DB954;;
     margin-bottom: 20px;
 }
 
-/* Table Styles */
 .spotify-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 40px;
-    font-size: 1rem;
+    margin: 20px 0;
 }
 
-.spotify-table th, .spotify-table td {
-    padding: 15px;
-    border-bottom: 1px solid #282828;
-    color: #b3b3b3;
+.spotify-table th,
+.spotify-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: #282828;
+    color: white;
 }
 
 .spotify-table th {
-    background-color: #282828;
-    font-weight: 600;
-    color: #b3b3b3;
+    background-color:  #1DB954;
+    color: #fff;
+    font-weight: bold;
 }
 
-.spotify-table tr:nth-child(even) {
-    background-color: #1d1d1d;
+.spotify-table tbody tr {
+    border-bottom: 1px solid #ddd;
 }
 
-.spotify-table tr:hover {
-    background-color: #282828;
-    cursor: pointer;
+.spotify-table tbody tr:nth-of-type(even) {
+    background-color: #3a3a3a;
 }
 
-/* Button Styles */
+.spotify-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1DB954;
+}
+
+
 .spotify-button {
-    background-color: #1DB954; 
+    background-color: #1DB954;
     color: white;
     border: none;
-    padding: 8px 20px;
-    border-radius: 50px;
+    padding: 8px 16px;
     cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: 0.95rem;
-    display: inline-flex;
+    font-size: 1rem;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .spotify-button:hover {
-    background-color: #18a849;
-}
-
-.delete-button {
-    background-color: #ff4d4d;
-    border-radius: 50px;
-}
-
-.delete-button:hover {
-    background-color: #ff1a1a;
+    background-color: #17a746;
 }
 
 
-.alert {
-    width: 100%;
-    padding: 15px;
+.spotify-button i {
+    margin-right: 8px;
+}
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+.pagination li.active{
+
+    margin: 0 5px;
+    background-color: #155724;
+    padding: 10px 15px;
     border-radius: 5px;
-    text-align: center;
-    margin: 20px 0;
+    text-decoration: none;
+
 }
 
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+.pagination a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #1db954; /* Spotify green */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #17a449;
+}
+
+.pagination .active a {
+    background-color: #1db954;
+    font-weight: bold;
+}
+
+.pagination .disabled a {
+    background-color: #b5b5b5;
+    color: #f0f0f0;
+}
+
+.pagination a .fa-arrow-left,
+.pagination a .fa-arrow-right {
+    font-size: 14px; /* Reduce the size of arrows */
+    padding: 5px;
+}
+
+.fa-arrow-left {
+    margin-right: 5px;
+}
+
+.fa-arrow-right {
+    margin-left: 5px;
 }
 
 
-@media (max-width: 768px) {
-    .spotify-admin-dashboard {
-        width: 95%;
-        padding: 20px;
-    }
 
-    .spotify-table th, .spotify-table td {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
-    h1 {
-        font-size: 2.2rem;
-    }
+.search-form input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #3e3e3e;
+    color: white;
+    padding-left: 20px;
+}
 
-    .admin-section h2 {
-        font-size: 1.6rem;
-    }
+.search-form button {
+    padding: 8px 16px;
+    background-color: #1DB954;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-form button:hover {
+    background-color: #17a746;
 }

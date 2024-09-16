@@ -13,13 +13,20 @@
 
             
             <ul class="left-nav">
-                <h1>MusicApp</h1>
+                <h1>Spotify</h1>
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About Us</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
             <ul class="right-nav">
+                
                 @auth
+
+                    @if(auth()->user()->is_admin)
+                        <li><a href="{{ route('admin.manageUsers') }}">Manage Users</a></li>
+                        <li><a href="{{ route('admin.manageSongs') }}">Manage Songs</a></li>
+                        <li><a href="{{ route('admin.manageMessages') }}">Manage Messages</a></li>
+                    @endif
                     <li><a href="{{ route('songs.create') }}">Create a New Song</a></li>
                     <li><a href="{{ route('logout') }}">Logout</a></li>
                 @else
@@ -43,7 +50,7 @@
     </header>
 
     <footer id="footer">
-        <p>&copy; 2024 MusicApp. All rights reserved.</p>
+        <p>&copy; 2024 Spotify. Dizajniranje korisnickog interfejsa.</p>
     </footer>
 
     <script>
